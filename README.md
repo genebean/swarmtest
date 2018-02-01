@@ -5,8 +5,8 @@ This is a demo of how to use the Puppet module
 to setup and manage a 3 node Docker Swarm cluster in Vagrant and deploy a
 Docker Compose application to it as a stack. The stack is comprised of an
 unmodified Nginx container and a linked Redis container. You can access Nginx
-via the url in the table below after running `vagrant up` in the project's root
-directory.
+via any of the urls in the table below after running `vagrant up` in the
+project's root directory.
 
 In the Vagrantfile I take advantage of the fact that its actually a ruby file
 and iterate over a range instead of repeating a bunch of code. For those less
