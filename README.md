@@ -5,7 +5,8 @@ This is a demo of how to use the Puppet module
 to setup and manage a 3 node Docker Swarm cluster in Vagrant and deploy a
 Docker Compose application to it as a stack. The stack is comprised of an
 unmodified Nginx container and a linked Redis container. You can access Nginx
-via the url in the table below.
+via the url in the table below after running `vagrant up` in the project's root
+directory.
 
 In the Vagrantfile I take advantage of the fact that its actually a ruby file
 and iterate over a range instead of repeating a bunch of code. For those less
@@ -37,7 +38,7 @@ to the ip address:
 | -------- | ----------- | ---- | --------------------- |
 | docker1  | 172.16.0.11 | 8081 | http://localhost:8081 |
 | docker2  | 172.16.0.12 | 8082 | http://localhost:8082 |
-| docker3  | 172.16.0.13 | 8083 | http://localhost:8083 | 
+| docker3  | 172.16.0.13 | 8083 | http://localhost:8083 |
 
 A `puppet apply` run happens on each VM as part of the setup process. The
 `docker1` vm has code that initializes the swarm and then creates a file in the
