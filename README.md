@@ -8,6 +8,19 @@ unmodified Nginx container and a linked Redis container. You can access Nginx
 via any of the urls in the table below after running `vagrant up` in the
 project's root directory.
 
+## vagrant-triggers plugin
+
+This Vagrantfile requires the vagrant triggers plugin so that it can clean
+up after itself. If you don't already have it you can install it via this:
+
+```bash
+$ vagrant plugin install vagrant-triggers
+```
+
+Details on the plugin are at https://github.com/emyl/vagrant-triggers
+
+## Vagrantfile and environment details
+
 In the Vagrantfile I take advantage of the fact that its actually a ruby file
 and iterate over a range instead of repeating a bunch of code. For those less
 familiar with ruby, here is a quick explination of what's going on. The file

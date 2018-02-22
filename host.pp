@@ -16,7 +16,8 @@ class { 'docker':
 }
 
 class {'docker::compose':
-  ensure => present,
+  ensure  => present,
+  version => '1.19.0',
 }
 
 if $facts['hostname'] == 'docker1' {
